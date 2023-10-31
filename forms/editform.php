@@ -30,7 +30,7 @@
                 <td><input type="text" name="name" value="<?php echo $name;?>"></td>
             </tr>
             <tr>
-                <td><input type="hidden" name="id" value="<?php echo $_GET['id'];?>"></td>
+                <td><input type="hidden" name="id" value=<?php echo $_GET['id'];?>></td>
                 <td><input type="submit" name="update" value="Update"></td>
             </tr>
         </table>
