@@ -3,8 +3,8 @@
 include_once("../dbConnection/mysqlconfig_connection.php");
 if (isset($_POST['update'])) {
     $id = $_POST['id'];
-    $code = $_POST['subject_code'];
-    $name = $_POST['subject_name'];
+    $code = $_POST['code'];
+    $name = $_POST['name'];
     // checking empty fields
     if (empty($code) || empty($name)) {
         if (empty($code)) {
