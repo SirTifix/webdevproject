@@ -1,25 +1,28 @@
 <?php
+    //including th database connection file
     include_once("../dbConnection/mysqlconfig_connection.php");
+    //including the fetch file
     include_once("../functions/fetch.php");
 ?>
-
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Sample CRUD</title>
-    </head>
-    <body> 
-        <h1>My Subjects</h1>
-        <a href="../forms/addform.php">Add Subjects</a><br/><br/>
-        <table width='100%' border= 1> 
-            <tr bgcolor='#CCCCCC'>
-                 <td>ID</td>
-                 <td>Subject Code</td>
-                 <td>Subject Name</td>
-                 <td>Action</td>
-            </tr>
-            <?php
-               while($res = mysqli_fetch_assoc($result)){
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample CRUD</title>
+</head>
+<body>
+    <h1>My Subjects</h1>
+    <a href="../forms/addform.php">Add Subjects</a><br><br>
+    <table width = '100%' border="1" >
+        <tr bgcolor='#CCCCCC'>
+            <td>ID</td>
+            <td>Subject Code</td>
+            <td>Subject Name</td>
+            <td>Action</td>
+        </tr>
+        <?php
+            while($res = mysqli_fetch_assoc($result)){
                 echo "<tr>";
                 echo "<td>". $res['subject_id']."</td>";
                 echo "<td>". $res["subject_code"]."</td>";

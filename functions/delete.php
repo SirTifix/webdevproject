@@ -1,10 +1,10 @@
 <?php
     //including the database connection file
     include_once("../dbConnection/mysqlconfig_connection.php");
-    //getting id of the data from url
+    //getting the id of data from url
     $id = $_GET['id'];
     //deleting the row from table
-    mysqli_query($dbc, "DELETE FROM tblsubject WHERE subject_id='$id'");
-    //redirecting to the display page called index.php
-    header("Location:../index.php");
+    mysqli_query($dbc, "DELETE FROM tblsubjects WHERE subject_id='$id'");
+    //redirecting to the display page (index.php in our case)
+    header("Location: ../functions/index.php");
 ?>
