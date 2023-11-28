@@ -12,7 +12,7 @@
 <body>
     <h1 style="text-align: center;">MY SUBJECTS</h1>
     <table width = '100%' border=1.5>
-    <tr style="text-align: center;" bgcolor='#CCCCCC' color='#000000'>
+    <tr style="text-align: center;" bgcolor='#B31312' color='#161A30'>
         <td style="font-weight: bold;">ID</td>
         <td style="font-weight: bold;">Subject Code</td>
         <td style="font-weight: bold;">Subject Name</td>
@@ -37,7 +37,15 @@
             }
         ?>
     </table><br/>
-    <a href="forms/addform.php">ADD SUBJECT</a><br/>
-    <a href="forms/addsyllabusform.php">ADD SYLLABUS</a>
+    <div>
+        <a href="forms/addform.php" style="text-decoration: none;" color='7071E8' "border-style: solid;" "border-color:blue" > 
+        ADD SUBJECT</a><br/>
+
+    </div>
+    <div>
+        <a href="forms/addsyllabusform.php" style="text-decoration: none;" color='7071E8' "border-style: solid;" "border-color:blue"> 
+        ADD SYLLABUS</a>
+    </div>
+    
 </body>
 </html>
