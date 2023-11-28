@@ -38,12 +38,12 @@
         ?>
     </table><br/>
     <div>
-        <a href="forms/addform.php" style="text-decoration: none;" color='7071E8' "border-style: solid;" "border-color:blue" > 
+        <a href="forms/addform.php" style="text-decoration: none;" color='7071E8'> 
         ADD SUBJECT</a><br/>
 
     </div>
     <div>
-        <a href="forms/addsyllabusform.php" style="text-decoration: none;" color='7071E8' "border-style: solid;" "border-color:blue"> 
+        <a href="forms/addsyllabusform.php" style="text-decoration: none;" color='7071E8'> 
         ADD SYLLABUS</a>
     </div>
     
