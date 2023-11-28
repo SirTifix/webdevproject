@@ -1,43 +1,35 @@
 <html>
     <head>
-        <title>Add Syllabus</title>
+        <title>Document</title>
     </head>
     <body>
-        <h1>Add Syllabus</h1>
-        <a href="../index.php">Home</a>
-        <br/><br/>
-        <form action="../functions/addsyllabus.php" method="post" name="form1">
-            <table width="25%">
-                <tr>
-                    <td>Syllabus Code</td>
-                    <td><input type="text" name="code"></td>
-                </tr>
-                <tr>
-                    <td>Syllabus Author</td>
-                    <td><input type="text" name="author"></td>
-                </tr>
-                <tr>
-                    <td>Subject</td>
-                    <td>
-                        <select name="subject">
-                            <?php
-                                include_once("../dbConnection/mysqlconfig_connection.php");
-                                $query = "SELECT * FROM tblsubjects";
-                                $result = mysqli_query($dbc, $query);
-                                while($res = mysqli_fetch_array($result)) {
-                                    echo "<option value=\"".$res['Subject_ID']."\">";
-                                    echo $res['Subject_Name'];
-                                    echo"</option>";
-                                }
-                            ?>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input type='submit' name='Submit' value='Add'></td>
-                </tr>
-            </table>
-        </form>
-    </body>
+        <?php
+
+        include_once("../dbConnection/mysqlconfig_connection.php");
+
+        if(isset($_POST['Submit'])){
+            $code = $_POST['code'];
+            $author = $_POST['author'];
+            $subject = $_POST['subject'];
+
+            if(empty($code) || empty($author)){
+                if(empty($code)){
+                    echo "<font color='red'>Syllabus code field is empty</font><br/>"; 
+                }
+                if(empty($author)){
+                    echo "<font color='red'>Syllabus author field is empty</font><br/>"; 
+                }
+                echo "<br/><a href ='javascript:self:history.back();'>Go Back</a>";
+            }
+            else {
+                $result = mysqli_query($dbc, "INSERT INTO tblsyllabus(syllabus_code, syllabus_author, Subject_ID) VALUES('$code', '$author', '$subject')");
+
+                echo "<p style='color: green; font-size: 1.5em;'>Data added successfully!</p>";
+                echo "<a href='../index.php' style='color: blue; font-size: 1.3em;'>View Results</a>";
+            }
+        }
+
+        ?>
+
+</body>
 </html>
