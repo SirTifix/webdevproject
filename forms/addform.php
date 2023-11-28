@@ -9,7 +9,7 @@
 
 <body>
     <h1>Add Subject</h1>
-    <a href="../index.php">Home</a>
+    <a href="../index.php">home</a>
     <br /><br />
     <form action="../functions/add.php" method="post" name="form1">
         <table width="25%" border="0">
